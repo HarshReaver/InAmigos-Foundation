@@ -11,7 +11,7 @@ Built with plain **HTML & CSS** (no frameworks, no build tools) as part of the W
 ## Project Structure
 
 ```
-18. InAmigos Website/
+InAmigos-Foundation
 ├── index.html      # Main webpage (single-page layout)
 ├── style.css       # All styles, responsive design, animations
 ├── LICENSE         # MIT License
