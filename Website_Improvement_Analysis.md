@@ -1,151 +1,108 @@
 # InAmigos Foundation — Website Improvement Analysis
 
 **Website:** https://inamigosfoundation.org.in/
-**Prepared by:** Harsh
+**Prepared by:** Harsh Vanguard
 **Date:** May 2025
 
 ---
 
-## 1. Hidden Spam Links Found on Every Page
+## 1. Spelling Mistake — "Sewa" Instead of "Seva"
 
-When you right-click and "View Page Source", the very first lines of code contain **hidden spam links** that say "slot gacor" (a gambling term). These links are invisible to visitors but search engines can see them.
+The project name "Seva" is misspelled as "Sewa" on the homepage hero banner. This is a small but noticeable error that can confuse visitors and looks careless.
 
-This means the website may have been **hacked or injected with malicious code**. Google can penalise or remove the site from search results because of this.
+**Screenshot:**
 
-**Where to find it:** Open any page → Right Click → View Page Source → Look at the very first lines before `<!DOCTYPE html>`
+[Insert screenshot of hero banner showing "SEWA" text]
 
-```
-<div style="display:none">
-  <a href="https://shopnoit.com/">slot gacor</a>
-</div>
-```
-
-There are **9 such hidden links** on every page.
-
-**Fix:** Remove all these hidden divs immediately and scan the server for malware.
+**Suggestion:** Correct the spelling to "Seva" on the slider to match the actual project name used everywhere else on the site.
 
 ---
 
-## 2. "Donate Now" Button is Disabled
+## 2. Gallery Zoom is Broken
 
-The most important button for any NGO — the **Donate Now button** in the navigation bar — is completely **commented out** (hidden using `<!-- -->`). Visitors have no quick way to donate from the header.
+When you click on any image in the Gallery section, instead of showing a zoomed-in version of the photo, it just puts a **dark shadow over the entire page**. The actual image never loads. The only way to exit is by clicking the small X button in the top-right corner.
 
-**Where to find it:** Inspect the navigation bar → Look for commented-out code in the top-right area of the navbar.
+This is a bad user experience because visitors expect to see the image bigger, not a blank dark screen.
 
-```
-<!--<a href="#" class="main-btn">Donate Now</a>-->
-```
+**Screenshot:**
 
-One of the commented-out donate links also has a **broken URL** — it joins two URLs together which would never work:
+[Insert screenshot showing the dark overlay with no image loading]
 
-```
-https://inamigosfoundation.org.in/https://rzp.io/l/kWQ87HP
-```
-
-**Fix:** Uncomment the Donate button and use the correct Razorpay link: `https://rzp.io/l/kWQ87HP`
+**Suggestion:** Fix the lightbox/popup plugin so it actually displays the full-size image when clicked.
 
 ---
 
 ## 3. Causes Page is Completely Empty
 
-The homepage has a section called "OUR CAUSES" with a button that says "View All Causes". But when you click it, the Causes page (`/causes`) is **completely blank** — no causes, no content, nothing.
+The homepage has a section called "OUR CAUSES" with a "View All Causes" button. But when you click it, the Causes page shows **"No Results"** — it's completely empty with no content at all.
 
-**Where to find it:** Visit https://inamigosfoundation.org.in/causes — you'll see just the header and footer with empty space in between.
+This is one of the main pages of an NGO website and it has nothing on it.
 
-**Fix:** Either add the six project causes to this page, or remove the "View All Causes" button from the homepage so visitors don't land on an empty page.
+**Screenshot:**
 
----
+[Insert screenshot of empty Causes page showing "No Results"]
 
-## 4. About Us Section is a Wall of Text
-
-The "About Us" section on the homepage has **everything crammed into one giant paragraph** — the founding story, certifications, all six projects, the mission statement — all without any line breaks, headings, or formatting.
-
-No one is going to read a 250-word paragraph on a website. Users scan, they don't read.
-
-**Where to find it:** Scroll down to the "Get to Know Us Better" section on the homepage.
-
-**Fix:** Break it into short paragraphs. Use bullet points for the certifications. Show the projects as separate cards instead of listing them in a paragraph.
+**Suggestion:** Add the six projects (Seva, Bachpanshala, Jeev, Udaan, Prakriti, Vikas) as cause cards on this page, or remove the "View All Causes" button until the page is ready.
 
 ---
 
-## 5. About Us Page Has ChatGPT Code Left In
+## 4. Hidden Spam Links in the Source Code
 
-The About Us page (`/page/About-Us`) has been written using ChatGPT, which is fine — but the **raw ChatGPT HTML code** was pasted directly into the page without cleaning it up. If you inspect the code, you can see:
+When you view the page source code (Right Click → View Page Source), the very first lines contain **hidden spam links** with the text "slot gacor" (a gambling-related term). There are 9 such links on every single page.
 
-```
-data-message-author-role="assistant"
-data-message-model-slug="gpt-4o"
-```
+These links are invisible to normal visitors but Google can read them. This usually means the website has been **hacked or injected with malicious code**. Google can penalise the website for this and remove it from search results.
 
-These are ChatGPT's internal code tags. It looks unprofessional and anyone who inspects the page can tell the content was copy-pasted from ChatGPT.
+**Screenshot:**
 
-**Where to find it:** Visit the About Us page → Right Click → Inspect → Look at the `<div>` elements inside the content area.
+[Insert screenshot of page source showing the hidden "slot gacor" divs]
 
-**Fix:** Copy only the text from ChatGPT and paste it as plain text in the website editor. Remove all the extra code classes.
+**Suggestion:** Remove all these hidden divs from the code immediately. Change all admin passwords and check the server for any malware or unauthorized access.
 
 ---
 
-## 6. Social Media Links Go Nowhere
+## 5. Social Media Links Point to Wrong Pages
 
-The header has social media icons for Facebook, Twitter, Google, Pinterest, and Instagram. But only **Facebook and Instagram** have correct links. The rest go to generic homepages:
+The footer has a "Follow us" section with social media icons. But most of these links just go to the **homepage of that platform**, not to InAmigos's actual profile:
 
-| Icon | Where it Links | Problem |
-|------|---------------|---------|
-| Facebook | facebook.com/inamigos.inamigos | Correct |
-| Twitter | twitter.com | Just the homepage, not their profile |
-| Google | google.com | Not a social media platform |
-| Pinterest | pinterest.com | Just the homepage, not their profile |
-| Instagram | instagram.com/inamigos/ | Correct |
+- **Facebook** → Goes to their actual page (Correct)
+- **Twitter** → Goes to twitter.com homepage (Wrong)
+- **Google+** → Google+ doesn't even exist anymore (Wrong)
+- **Pinterest** → Goes to pinterest.com homepage (Wrong)
+- **Instagram** → Goes to their actual page (Correct)
 
-Also, the **YouTube channel** is missing entirely — they have one at `youtube.com/@inamigosfoundation`.
+Also, the foundation's **YouTube channel** is not linked anywhere on the site even though they have one.
 
-**Where to find it:** Look at the green top bar of the website with the small social icons.
+**Screenshot:**
 
-**Fix:** Remove icons for platforms they don't use. Add their YouTube link. Fix Twitter to point to their actual profile.
+[Insert screenshot of footer showing the social media icons]
 
----
-
-## 7. Same Meta Description on Every Page
-
-Every page on the website — Home, About, Causes — uses the **exact same description** in the code:
-
-```
-"All funds raised by InAmigos Foundation may be pooled together and
-allocated towards foods and water, education and social inclusion
-initiatives across India."
-```
-
-This hurts SEO because Google needs each page to have its own unique description. The description is also quite generic and doesn't mention what makes InAmigos special.
-
-**Where to find it:** View Page Source on any page → Search for `<meta name="description"`.
-
-**Fix:** Write a unique, specific description for each page (keep it under 160 characters).
+**Suggestion:** Remove Google+ since the platform is shut down. Remove Pinterest and Twitter if they don't have active profiles. Add their YouTube channel link (youtube.com/@inamigosfoundation).
 
 ---
 
-## 8. Website Loads Too Many Unnecessary Files
+## 6. Same Meta Description on Every Page
 
-The website loads **16 CSS files and 20+ JavaScript files** on every page. One of them is **TinyMCE** — a text editor meant for admins to write content — which is loaded even for regular visitors who will never use it.
+Every page on the website uses the exact same description in the HTML code. Whether you visit Home, About Us, or Causes — the description tag is identical:
 
-This slows down the website and wastes the visitor's data.
+*"All funds raised by InAmigos Foundation may be pooled together and allocated towards foods and water, education and social inclusion initiatives across India."*
 
-**Where to find it:** Right Click → Inspect → Go to the "Network" tab → Reload the page → Count the CSS and JS files.
+Google uses this description to show results in search. When every page has the same one, Google can't tell them apart and may rank the site lower.
 
-**Fix:** Remove TinyMCE and other admin-only scripts from public pages. Combine multiple CSS files into one. This will make the site load much faster.
+**Suggestion:** Write a short, unique description for each page that tells Google what that specific page is about.
 
 ---
 
-## Summary Table
+## Summary
 
-| # | Issue | Why It Matters |
-|---|-------|---------------|
-| 1 | Spam links hidden in code | Site may be hacked, Google can penalise it |
-| 2 | Donate button disabled | Visitors can't easily donate |
-| 3 | Causes page is empty | Bad user experience, broken navigation |
-| 4 | About section is a wall of text | No one will read it |
-| 5 | ChatGPT code visible in About page | Looks unprofessional |
-| 6 | Social links go to wrong pages | Misleading, missing YouTube |
-| 7 | Same meta description everywhere | Hurts search engine ranking |
-| 8 | Too many files loaded | Slows down the website |
+| # | Issue Found | Impact |
+|---|------------|--------|
+| 1 | "Seva" is misspelled as "Sewa" | Looks careless, confuses visitors |
+| 2 | Gallery zoom doesn't show images | Bad user experience |
+| 3 | Causes page is empty | Main page has no content |
+| 4 | Spam links hidden in source code | Website may be hacked, SEO risk |
+| 5 | Social media links go nowhere | Misleading, missing YouTube |
+| 6 | Same meta description everywhere | Hurts search engine ranking |
 
+---
 
+*Prepared as part of the InAmigos Foundation Web Development Internship — Task 2*
