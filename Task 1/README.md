@@ -2,23 +2,22 @@
 
 A clean, responsive awareness webpage for **InAmigos Foundation**, a Section 8 registered non-profit organisation working across 28 states of India.
 
-Built with plain **HTML & CSS** (no frameworks, no build tools) as part of the Web Development Internship Task.
+Built with plain **HTML & CSS** (no frameworks, no build tools) as part of the Web Development Internship Task 1.
 
-**Live Demo:** https://in-amigos-foundation-alpha.vercel.app/
+**Live Demo:** [harshreaver.github.io/InAmigos-Foundation](https://harshreaver.github.io/InAmigos-Foundation/)
 
 ---
 
 ## Project Structure
 
 ```
-InAmigos-Foundation
+Task 1/
 ├── index.html      # Main webpage (single-page layout)
 ├── style.css       # All styles, responsive design, animations
-├── LICENSE         # MIT License
 └── README.md       # This file
 ```
 
-Both files are self-contained. Open `index.html` in any browser to view the page — no server or build step needed.
+Open `index.html` in any browser to view the page — no server or build step needed.
 
 ---
 
@@ -52,13 +51,14 @@ No JavaScript frameworks, no npm, no build process.
 
 1. Open `index.html` in any modern browser (Chrome, Firefox, Edge, Safari)
 2. Or use VS Code with the **Live Server** extension for hot-reloading
+3. Or visit the live demo: [harshreaver.github.io/InAmigos-Foundation](https://harshreaver.github.io/InAmigos-Foundation/)
 
 ---
 
 ## SEO Features
 
 - Descriptive `<title>` and `<meta description>`
-- Open Graph tags (Facebook, LinkedIn sharing)
+- Open Graph tags (Facebook, LinkedIn, WhatsApp sharing)
 - Twitter Card tags
 - JSON-LD structured data (Schema.org `NGO` type)
 - Canonical URL
@@ -76,6 +76,7 @@ All content and images are sourced from official InAmigos Foundation channels:
 - **Website:** [inamigosfoundation.org.in](https://inamigosfoundation.org.in/)
 - **Instagram:** [@inamigos](https://www.instagram.com/inamigos/)
 - **Facebook:** [InAmigos Foundation](https://www.facebook.com/inamigos.inamigos)
+- **YouTube:** [@inamigosfoundation](https://www.youtube.com/@inamigosfoundation)
 
 No third-party or AI-generated images are used. All visuals are official assets from the foundation's website.
 
@@ -88,6 +89,7 @@ No third-party or AI-generated images are used. All visuals are official assets 
 | [Donate (Razorpay)](https://rzp.io/l/kWQ87HP)            | Donation page              |
 | [Volunteer Form](https://forms.gle/AB4c1hLaDDmtrKGU7)    | Google Form for volunteers |
 | [Official Website](https://inamigosfoundation.org.in)     | InAmigos Foundation site   |
+| [YouTube Channel](https://www.youtube.com/@inamigosfoundation) | YouTube              |
 
 ---
 
@@ -111,6 +113,6 @@ Tested on modern browsers. Uses CSS Grid, Flexbox, `backdrop-filter`, and `Inter
 
 ## License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** — see the [LICENSE](../LICENSE) file for details.
 
 All content and images belong to InAmigos Foundation and are used here for educational and awareness purposes.
