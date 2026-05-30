@@ -10,7 +10,7 @@
 
 **NexusAI** is a fictional AI-powered data analytics SaaS platform. This website was generated entirely using AI to demonstrate how AI tools can build professional, production-ready websites from scratch.
 
-**Live Demo:** *(add GitHub Pages link after deploying)*
+**Live Demo:** https://in-amigos-foundation-ey4y.vercel.app/*
 
 ---
 
