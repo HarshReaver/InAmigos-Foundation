@@ -51,7 +51,7 @@ No JavaScript frameworks, no npm, no build process.
 
 1. Open `index.html` in any modern browser (Chrome, Firefox, Edge, Safari)
 2. Or use VS Code with the **Live Server** extension for hot-reloading
-3. Or visit the live demo: [harshreaver.github.io/InAmigos-Foundation](https://harshreaver.github.io/InAmigos-Foundation/)
+3. Or visit the live demo: [harshreaver.github.io/InAmigos-Foundation](https://in-amigos-foundation-alpha.vercel.app/)
 
 ---
 
