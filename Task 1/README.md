@@ -4,7 +4,7 @@ A clean, responsive awareness webpage for **InAmigos Foundation**, a Section 8 r
 
 Built with plain **HTML & CSS** (no frameworks, no build tools) as part of the Web Development Internship Task 1.
 
-**Live Demo:** https://in-amigos-foundation-git-main-harshkrish2323-4283s-projects.vercel.app/
+**Live Demo:** https://in-amigos-foundation-alpha.vercel.app/
 
 ---
 
